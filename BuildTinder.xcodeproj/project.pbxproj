@@ -11,6 +11,8 @@
 		8F3DD88228AC07D800307239 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD88128AC07D800307239 /* ContentView.swift */; };
 		8F3DD88428AC07D900307239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3DD88328AC07D900307239 /* Assets.xcassets */; };
 		8F3DD88728AC07D900307239 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3DD88628AC07D900307239 /* Preview Assets.xcassets */; };
+		8F3DD88E28AC07EE00307239 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD88D28AC07EE00307239 /* MainView.swift */; };
+		8F3DD89028AC081800307239 /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD88F28AC081800307239 /* TabBarButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8F3DD88128AC07D800307239 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F3DD88328AC07D900307239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F3DD88628AC07D900307239 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F3DD88D28AC07EE00307239 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8F3DD88F28AC081800307239 /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				8F3DD88128AC07D800307239 /* ContentView.swift */,
 				8F3DD88328AC07D900307239 /* Assets.xcassets */,
 				8F3DD88528AC07D900307239 /* Preview Content */,
+				8F3DD88D28AC07EE00307239 /* MainView.swift */,
+				8F3DD88F28AC081800307239 /* TabBarButtonView.swift */,
 			);
 			path = BuildTinder;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3DD89028AC081800307239 /* TabBarButtonView.swift in Sources */,
 				8F3DD88228AC07D800307239 /* ContentView.swift in Sources */,
+				8F3DD88E28AC07EE00307239 /* MainView.swift in Sources */,
 				8F3DD88028AC07D800307239 /* BuildTinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
