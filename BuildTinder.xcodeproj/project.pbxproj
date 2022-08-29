@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		8F347B1C28B6748000C3322E /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F347B1B28B6748000C3322E /* KingfisherSwiftUI */; };
 		8F347B1F28B690B700C3322E /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B1E28B690B700C3322E /* ProfileSwipePromo.swift */; };
+		8F347B2128BCE42C00C3322E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2028BCE42C00C3322E /* Message.swift */; };
+		8F347B2428BCE54000C3322E /* Person .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2328BCE54000C3322E /* Person .swift */; };
+		8F347B2628BCE66B00C3322E /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2528BCE66B00C3322E /* MessagePreview.swift */; };
+		8F347B2828BCE77F00C3322E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2728BCE77F00C3322E /* MessageView.swift */; };
+		8F347B2B28BCF7C700C3322E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2A28BCF7C700C3322E /* ChatView.swift */; };
+		8F347B2D28BCF83500C3322E /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2C28BCF83500C3322E /* ChatManager.swift */; };
+		8F347B2F28BD002B00C3322E /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2E28BD002B00C3322E /* ChatViewHeader.swift */; };
 		8F3DD88028AC07D800307239 /* BuildTinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD87F28AC07D800307239 /* BuildTinderApp.swift */; };
 		8F3DD88228AC07D800307239 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD88128AC07D800307239 /* ContentView.swift */; };
 		8F3DD88428AC07D900307239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3DD88328AC07D900307239 /* Assets.xcassets */; };
@@ -23,6 +30,13 @@
 
 /* Begin PBXFileReference section */
 		8F347B1E28B690B700C3322E /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
+		8F347B2028BCE42C00C3322E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8F347B2328BCE54000C3322E /* Person .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person .swift"; sourceTree = "<group>"; };
+		8F347B2528BCE66B00C3322E /* MessagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
+		8F347B2728BCE77F00C3322E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		8F347B2A28BCF7C700C3322E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		8F347B2C28BCF83500C3322E /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		8F347B2E28BD002B00C3322E /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
 		8F3DD87C28AC07D800307239 /* BuildTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3DD87F28AC07D800307239 /* BuildTinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderApp.swift; sourceTree = "<group>"; };
 		8F3DD88128AC07D800307239 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +70,27 @@
 			path = HelperView;
 			sourceTree = "<group>";
 		};
+		8F347B2228BCE43300C3322E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F347B2028BCE42C00C3322E /* Message.swift */,
+				8F347B2328BCE54000C3322E /* Person .swift */,
+				8F347B2528BCE66B00C3322E /* MessagePreview.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F347B2928BCE78C00C3322E /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				8F347B2728BCE77F00C3322E /* MessageView.swift */,
+				8F347B2A28BCF7C700C3322E /* ChatView.swift */,
+				8F347B2C28BCF83500C3322E /* ChatManager.swift */,
+				8F347B2E28BD002B00C3322E /* ChatViewHeader.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		8F3DD87328AC07D800307239 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +115,8 @@
 				8F3DD89328AC0AE700307239 /* AppStateManager.swift */,
 				8F3DD89728AC18B100307239 /* MainTabBar */,
 				8F3DD89A28AC399F00307239 /* Profile */,
+				8F347B2928BCE78C00C3322E /* Messages */,
+				8F347B2228BCE43300C3322E /* Model */,
 				8F347B1D28B6764800C3322E /* HelperView */,
 				8F3DD88328AC07D900307239 /* Assets.xcassets */,
 				8F3DD88528AC07D900307239 /* Preview Content */,
@@ -190,15 +227,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F347B2D28BCF83500C3322E /* ChatManager.swift in Sources */,
 				8F3DD89028AC081800307239 /* TabBarButtonView.swift in Sources */,
+				8F347B2428BCE54000C3322E /* Person .swift in Sources */,
+				8F347B2F28BD002B00C3322E /* ChatViewHeader.swift in Sources */,
 				8F3DD89C28AC3C9300307239 /* RoundedImage.swift in Sources */,
 				8F3DD89628AC0EEC00307239 /* Extensions.swift in Sources */,
+				8F347B2B28BCF7C700C3322E /* ChatView.swift in Sources */,
 				8F3DD88228AC07D800307239 /* ContentView.swift in Sources */,
+				8F347B2828BCE77F00C3322E /* MessageView.swift in Sources */,
 				8F347B1F28B690B700C3322E /* ProfileSwipePromo.swift in Sources */,
 				8F3DD88E28AC07EE00307239 /* MainView.swift in Sources */,
 				8F3DD88028AC07D800307239 /* BuildTinderApp.swift in Sources */,
+				8F347B2128BCE42C00C3322E /* Message.swift in Sources */,
 				8F3DD89928AC398E00307239 /* ProfileView.swift in Sources */,
 				8F3DD89428AC0AE700307239 /* AppStateManager.swift in Sources */,
+				8F347B2628BCE66B00C3322E /* MessagePreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
