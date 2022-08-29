@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F347B1C28B6748000C3322E /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F347B1B28B6748000C3322E /* KingfisherSwiftUI */; };
+		8F347B1F28B690B700C3322E /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B1E28B690B700C3322E /* ProfileSwipePromo.swift */; };
 		8F3DD88028AC07D800307239 /* BuildTinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD87F28AC07D800307239 /* BuildTinderApp.swift */; };
 		8F3DD88228AC07D800307239 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD88128AC07D800307239 /* ContentView.swift */; };
 		8F3DD88428AC07D900307239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3DD88328AC07D900307239 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F347B1E28B690B700C3322E /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
 		8F3DD87C28AC07D800307239 /* BuildTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3DD87F28AC07D800307239 /* BuildTinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTinderApp.swift; sourceTree = "<group>"; };
 		8F3DD88128AC07D800307239 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				8F3DD89828AC398E00307239 /* ProfileView.swift */,
+				8F347B1E28B690B700C3322E /* ProfileSwipePromo.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				8F3DD89C28AC3C9300307239 /* RoundedImage.swift in Sources */,
 				8F3DD89628AC0EEC00307239 /* Extensions.swift in Sources */,
 				8F3DD88228AC07D800307239 /* ContentView.swift in Sources */,
+				8F347B1F28B690B700C3322E /* ProfileSwipePromo.swift in Sources */,
 				8F3DD88E28AC07EE00307239 /* MainView.swift in Sources */,
 				8F3DD88028AC07D800307239 /* BuildTinderApp.swift in Sources */,
 				8F3DD89928AC398E00307239 /* ProfileView.swift in Sources */,
