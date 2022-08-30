@@ -76,7 +76,7 @@ struct ChatView: View {
             }
         }
         .onChange(of: chatMng.messages) { _ in
-             scrollToBottom()
+            scrollToBottom()
         }
     }
     
@@ -87,9 +87,9 @@ struct ChatView: View {
     
     func scrollToBottom() {
         withAnimation{
-        scrollProxy?.scrollTo(chatMng.messages.count - 1, anchor: .bottom)
+            scrollProxy?.scrollTo(chatMng.messages.count - 1, anchor: .bottom)
         }
-        }
+    }
 }
 
 struct ChatView_Previews: PreviewProvider {
