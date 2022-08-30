@@ -26,6 +26,8 @@
 		8F3DD89628AC0EEC00307239 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD89528AC0EEC00307239 /* Extensions.swift */; };
 		8F3DD89928AC398E00307239 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD89828AC398E00307239 /* ProfileView.swift */; };
 		8F3DD89C28AC3C9300307239 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DD89B28AC3C9300307239 /* RoundedImage.swift */; };
+		8FDE1F7A28BE922C0078D280 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDE1F7928BE922C0078D280 /* MessageListView.swift */; };
+		8FDE1F7C28BE93180078D280 /* MessageListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDE1F7B28BE93180078D280 /* MessageListVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		8F3DD89528AC0EEC00307239 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8F3DD89828AC398E00307239 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8F3DD89B28AC3C9300307239 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		8FDE1F7928BE922C0078D280 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		8FDE1F7B28BE93180078D280 /* MessageListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				8F347B2A28BCF7C700C3322E /* ChatView.swift */,
 				8F347B2C28BCF83500C3322E /* ChatManager.swift */,
 				8F347B2E28BD002B00C3322E /* ChatViewHeader.swift */,
+				8FDE1F7928BE922C0078D280 /* MessageListView.swift */,
+				8FDE1F7B28BE93180078D280 /* MessageListVM.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -228,10 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F347B2D28BCF83500C3322E /* ChatManager.swift in Sources */,
+				8FDE1F7A28BE922C0078D280 /* MessageListView.swift in Sources */,
 				8F3DD89028AC081800307239 /* TabBarButtonView.swift in Sources */,
 				8F347B2428BCE54000C3322E /* Person.swift in Sources */,
 				8F347B2F28BD002B00C3322E /* ChatViewHeader.swift in Sources */,
 				8F3DD89C28AC3C9300307239 /* RoundedImage.swift in Sources */,
+				8FDE1F7C28BE93180078D280 /* MessageListVM.swift in Sources */,
 				8F3DD89628AC0EEC00307239 /* Extensions.swift in Sources */,
 				8F347B2B28BCF7C700C3322E /* ChatView.swift in Sources */,
 				8F3DD88228AC07D800307239 /* ContentView.swift in Sources */,

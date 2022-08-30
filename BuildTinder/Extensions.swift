@@ -29,3 +29,15 @@ extension Color {
     static let defaultBackground = Color(.systemGray6).opacity(0.35)
     static let texttfieldBG = Color(.systemGray6)
 }
+
+//extension View  {
+//    func endEdititng(_ force: Bool) {
+//        UIApplication.shared.windows.forEach{ $0.endEditing(force)}
+//    }
+//}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
