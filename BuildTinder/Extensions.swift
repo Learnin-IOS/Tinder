@@ -41,3 +41,11 @@ extension UIApplication {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
+
+struct HideNavigationView: ViewModifier{
+    func body(content: Content) -> some View {
+        content
+            .navigationTitle("")
+            .navigationBarHidden(true)
+    }
+}
