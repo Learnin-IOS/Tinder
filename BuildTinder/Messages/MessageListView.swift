@@ -15,50 +15,66 @@ struct MessageListView: View {
     
     
     var body: some View {
-        VStack {
-            HStack {
-                TextField("Search Matches", text: $searchText)
-                    .padding(7)
-                    .padding(.horizontal, 25)
-                    .background(Color.texttfieldBG)
-                    .cornerRadius(8)
-                    .overlay(
-                    HStack{
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.textPrimary)
-                            .font(.system(size: 20, weight:.bold))
-                            .padding(.leading, 4)
-                        
-                        Spacer()
+        ScrollView {
+            VStack {
+                HStack {
+                    TextField("Search Matches", text: $searchText)
+                        .padding(7)
+                        .padding(.horizontal, 25)
+                        .background(Color.texttfieldBG)
+                        .cornerRadius(8)
+                        .overlay(
+                        HStack{
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.textPrimary)
+                                .font(.system(size: 20, weight:.bold))
+                                .padding(.leading, 4)
+                            
+                            Spacer()
+                        }
+                    )
+                    .padding(.horizontal, 10)
+                    .onTapGesture {
+                        self.isEdititing = true
                     }
-                )
-                .padding(.horizontal, 10)
-                .onTapGesture {
-                    self.isEdititing = true
+                    .animation(.easeIn(duration: 0.25))
+                    
+                    if isEdititing{
+                    Button(action: {
+                        self.isEdititing = false
+                        self.searchText = ""
+    //                    self.endEdititng(true)  " was deprecated in iOS 15 "
+                        UIApplication.shared.endEditing()
+                    }, label: {
+                        Text("Cancel")
+                    })
+                    .padding(.trailing, 10)
+                    .transition(.move(edge: .trailing))
+                    .animation(.easeIn(duration: 0.25))
+                    }
                 }
-                .animation(.easeIn(duration: 0.25))
+                Spacer().frame(height: 14)
                 
-                if isEdititing{
-                Button(action: {
-                    self.isEdititing = false
-                    self.searchText = ""
-//                    self.endEdititng(true)  " was deprecated in iOS 15 "
-                    UIApplication.shared.endEditing()
-                }, label: {
-                    Text("Cancel")
-                })
-                .padding(.trailing, 10)
-                .transition(.move(edge: .trailing))
-                .animation(.easeIn(duration: 0.25))
+                VStack{
+                    ForEach(vm.messagePreviews, id: \.self) { preview in
+                        NavigationLink(destination: ChatView(person: preview.person), label: {
+                            MessageRowView(preview: preview)
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                    }
                 }
+                
+                Spacer()
             }
-            Spacer()
         }
+        .modifier(HideNavigationView())
     }
 }
 
 struct MessageListView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageListView()
+        NavigationView{
+            MessageListView()
+        }
     }
 }
