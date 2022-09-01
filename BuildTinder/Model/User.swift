@@ -12,3 +12,8 @@ struct User {
     
     var goldSubscriber: Bool = false 
 }
+
+
+extension User {
+    static let example = User(name: "Alex", goldSubscriber: false )
+}
