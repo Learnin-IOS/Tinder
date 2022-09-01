@@ -8,5 +8,13 @@
 import Foundation
 
 class UserManager: ObservableObject {
-    @Published var currentUser: User = User(nam: <#T##String#>)
+    @Published var currentUser: User = User(name: "")
+    
+    init(){
+        loadUser()
+    }
+    
+   private func loadUser(){
+       self.currentUser = User.example
+    }
 }
