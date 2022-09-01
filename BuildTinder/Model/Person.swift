@@ -23,7 +23,7 @@ extension Person {
     
     static let example2 = Person(
         name: "Patrick",
-        imagesURLS: [URL(string: "https://picsum.photos/400/301")!],
+        imagesURLS: [URL(string: "https://picsum.photos/400/304")!],
         bio: "I really love cats"
     )
 }
