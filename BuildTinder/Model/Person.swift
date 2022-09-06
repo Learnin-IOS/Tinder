@@ -8,22 +8,26 @@
 import Foundation
 
 
-struct Person: Hashable {
+struct Person: Hashable, Identifiable {
+    let id = UUID().uuidString
     var name: String
     var imagesURLS: [URL]
     var bio: String
+    var age: Int
 }
 
 extension Person {
     static let example = Person(
         name: "Alex",
         imagesURLS: [URL(string: "https://picsum.photos/400/300")!],
-        bio: "Gaming is my life"
+        bio: "Gaming is my life",
+        age: 21
     )
     
     static let example2 = Person(
         name: "Patrick",
         imagesURLS: [URL(string: "https://picsum.photos/400/304")!],
-        bio: "I really love cats"
+        bio: "I really love cats",
+        age: 25
     )
 }
