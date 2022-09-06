@@ -23,6 +23,6 @@ class UserManager: ObservableObject {
     }
     
     private func loadMatches() {
-        self.matches = [Person.example, Person.example2]
+        self.matches = Person.examples
     }
 }
