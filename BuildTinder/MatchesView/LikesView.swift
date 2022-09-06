@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LikesView: View {
     @EnvironmentObject var userMng: UserManager
+    @EnvironmentObject var appState: AppStateManager
     
     private var user: User {
         return userMng.currentUser
@@ -31,11 +32,24 @@ struct LikesView: View {
                       spacing: nil,
                       pinnedViews: [],
                       content: {
-                Text("Placeholder")
-                Text("Placeholder")
-                
+                ForEach(userMng.matches) { match in
+                    PersonSquare(person: match, blur: !user.goldSubscriber)
+                        .frame(height: 240)
+                        .onTapGesture {
+                            personTapped(match)
+                        }
+                }
             })
+            .padding(.horizontal, 6)
         })
+    }
+    
+    func personTapped(_ person: Person){
+        if user.goldSubscriber {
+            appState.showPersonsProfile(person)
+        } else {
+            appState.showPurchaseScreen()
+        }
     }
 }
 
@@ -43,5 +57,6 @@ struct LikesView_Previews: PreviewProvider {
     static var previews: some View {
         LikesView()
             .environmentObject(UserManager())
+            .environmentObject(AppStateManager())
     }
 }
