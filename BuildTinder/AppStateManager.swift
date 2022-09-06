@@ -17,7 +17,7 @@ class AppStateManager: ObservableObject{
         self.showPersonsProfile = person
     }
     
-//    public func showPurchaseScreen () {
-//        self.showPurchasePopup = true
-//    }
+    public func showPurchaseScreen () {
+        self.showPurchasePopup = true
+    }
 }
