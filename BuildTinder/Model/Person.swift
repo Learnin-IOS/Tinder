@@ -30,4 +30,29 @@ extension Person {
         bio: "I really love cats",
         age: 25
     )
+    static let examples: [Person] = [
+        Person.example,
+        Person.example2,
+        Person(name: "Boohle",
+               imagesURLS: [URL(string: "https://picsum.photos/400/302")!],
+               bio: "I love hiking",
+               age: 28),
+        Person(name: "Nikita",
+               imagesURLS: [URL(string: "https://picsum.photos/400/303")!],
+               bio: "Music is more than art to me",
+               age: 23),
+        Person(name: "Samantha",
+               imagesURLS: [URL(string: "https://picsum.photos/400/305")!],
+               bio: "I love travelling",
+               age: 27),
+        Person(name: "Olivia",
+               imagesURLS: [URL(string: "https://picsum.photos/400/306")!],
+               bio: "i love tring new cuisine",
+               age: 19),
+        Person(name: "Mia",
+               imagesURLS: [URL(string: "https://picsum.photos/400/307")!],
+               bio: "I am really boring ",
+               age: 30)
+    
+    ]
 }
