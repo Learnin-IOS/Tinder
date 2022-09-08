@@ -10,11 +10,14 @@ import Foundation
 class UserManager: ObservableObject {
     @Published var currentUser: User = User(name: "")
     @Published var matches: [Person] = []
+    @Published var topPicks: [Person] = []
     
     init(){
         loadUser()
         loadMatches()
+        loadTopPicks()
     }
+    
     
     
     
@@ -24,5 +27,8 @@ class UserManager: ObservableObject {
     
     private func loadMatches() {
         self.matches = Person.examples
+    }
+    private func loadTopPicks(){
+        self.topPicks = Person.examples.shuffled()
     }
 }
