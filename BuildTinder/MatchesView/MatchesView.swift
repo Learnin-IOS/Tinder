@@ -56,8 +56,11 @@ struct MatchesView: View {
                             }
                     })
                     .buttonStyle(PlainButtonStyle())
+                    
                     Spacer()
+                    
                 }
+                
                 Divider()
                     .padding(.vertical, 14)
                 
@@ -68,6 +71,7 @@ struct MatchesView: View {
                 }
                 
                 Spacer()
+                
             }
             
             Button(action: {}, label: {
