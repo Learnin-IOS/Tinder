@@ -8,7 +8,7 @@
 import Foundation
 
 class UserManager: ObservableObject {
-    @Published var currentUser: User = User(name: "")
+    @Published var currentUser: User = User(name: "", age: 0, jobTitle: "b")
     @Published var matches: [Person] = []
     @Published var topPicks: [Person] = []
     
@@ -17,9 +17,6 @@ class UserManager: ObservableObject {
         loadMatches()
         loadTopPicks()
     }
-    
-    
-    
     
    private func loadUser(){
        self.currentUser = User.example
