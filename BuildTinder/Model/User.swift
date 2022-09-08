@@ -10,7 +10,7 @@ import Foundation
 struct User {
     var name: String
     
-    var goldSubscriber: Bool = false 
+    var goldSubscriber: Bool = false
 }
 
 
