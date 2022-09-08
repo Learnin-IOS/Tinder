@@ -32,11 +32,11 @@ struct TopPicksView: View {
                       spacing: nil,
                       pinnedViews: [],
                       content: {
-                ForEach(userMng.matches) { match in
-                    PersonSquare(person: match, blur: !user.goldSubscriber)
+                ForEach(userMng.topPicks) { pick in
+                    PersonSquare(person: pick, blur: !user.goldSubscriber)
                         .frame(height: 240)
                         .onTapGesture {
-                            personTapped(match)
+                            personTapped(pick)
                         }
                 }
             })
