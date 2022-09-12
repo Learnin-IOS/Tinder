@@ -69,7 +69,7 @@ struct PurchasePopup: View {
                         .foregroundColor(.white)
                         .font(.system(size: 14, weight: .semibold))
                     
-                    Text("This is a bunch of example text that is representing the legal found on all subcription pages. Out of respect to the original application we will not be copying over their legaltext word for word here.")
+                    Text("This is a bunch of example text that is representing the legal text found on all subcription pages. Out of respect to the original application we will not be copying over their legaltext word for word here.")
                         .foregroundColor(Color.white.opacity(0.5))
                         .font(.system(size: 14, weight: .semibold))
                         .multilineTextAlignment(.center)
