@@ -16,7 +16,7 @@ struct PurchaseSwipePromo: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 75)
-                Text("25 people already like !")
+                Text("25 people already like you!")
                     .font(.system(size: 18, weight: .bold))
                 
                 Text("Match with them instantly")
@@ -27,7 +27,7 @@ struct PurchaseSwipePromo: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 75)
-                Text("25 people already like !")
+                Text("25 people already like you !")
                     .font(.system(size: 18, weight: .bold))
                 
                 Text("Match with them instantly")
@@ -38,7 +38,7 @@ struct PurchaseSwipePromo: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 75)
-                Text("25 people already like !")
+                Text("25 people already like you!")
                     .font(.system(size: 18, weight: .bold))
                 
                 Text("Match with them instantly")
