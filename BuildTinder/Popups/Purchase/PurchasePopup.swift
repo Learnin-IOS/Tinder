@@ -25,9 +25,9 @@ struct PurchasePopup: View {
                         .foregroundColor(.yellow)
                         .font(.system(size: 24, weight: .bold))
                     
-                    Text("PurchaseSwipePromo")
+                    PurchaseSwipePromo()
                         .frame(height: geo.size.height / 3)
-                        .background(.gray)
+                        .padding(.top, -35)
                     
                     
                     Text("3 purchase options")
@@ -50,7 +50,7 @@ struct PurchasePopup: View {
                     Button(action: { isVisible = false}, label: {
                         Text("NO THANKS")
                             .foregroundColor(.textPrimary)
-                            .font(.system(size: 20, weight: .heavy))
+                            .font(.system(size: 20, weight: .heavy))  
                             .padding(.vertical, 18)
                         
                     })
