@@ -16,6 +16,11 @@ struct Subscription: Identifiable {
     var savePercent: Int?
     var tagLine: TagLine = .none
     
+//    // for using other currencies
+//    var subscriptionPriceText: String {
+//
+//    }
+    
     enum TagLine : String {
         case mostPopular = "MOST POPULAR"
         case bestvalue = "BEST VALUE"
