@@ -6,15 +6,57 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
+
 
 struct CardImageScroller: View {
+    
+    var person: Person
+    
+    @State private var imageIndex = 0
+    
+    func updateImageIndex(addition: Bool){
+        let newIndex: Int
+        
+        if addition {
+            newIndex = imageIndex + 1
+        } else {
+            newIndex = imageIndex - 1
+        }
+        
+        imageIndex = min(max(0, newIndex), person.imagesURLS.count - 1)
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geo in
+            ZStack{
+                KFImage(person.imagesURLS[imageIndex])
+                    .placeholder {
+                        Color.white
+                    }
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
+                
+                HStack{
+                    Rectangle()
+                        .onTapGesture {
+                            updateImageIndex(addition: false )
+                        }
+                    
+                    Rectangle()
+                        .onTapGesture {
+                            updateImageIndex(addition: true)
+                        }
+                }
+                .foregroundColor(Color.white.opacity(0.001))
+            }
+        }
     }
 }
 
 struct CardImageScroller_Previews: PreviewProvider {
     static var previews: some View {
-        CardImageScroller()
+        CardImageScroller(person: Person.example)
     }
 }
