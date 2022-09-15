@@ -20,7 +20,8 @@ struct PurchasePopup: View {
     ]
     
     func processPayment (){
-         
+        // making networking requests for payments
+         //let product = subscriptions[selectedIndex]
     }
     var body: some View {
         GeometryReader { geo in
@@ -43,7 +44,7 @@ struct PurchasePopup: View {
                              
                             PruchaseOptionsView(sub: sub, isSelected: subIndex == selectedIndex)
                                 .onTapGesture {
-                                    selectedIndex = subIndex 
+                                    selectedIndex = subIndex
                                 }
                         }
                     }
