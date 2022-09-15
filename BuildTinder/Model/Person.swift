@@ -5,7 +5,7 @@
 //  Created by Le Bon B' Bauma on 29/08/2022.
 //
 
-import Foundation
+import SwiftUI
 
 
 struct Person: Hashable, Identifiable {
@@ -14,6 +14,12 @@ struct Person: Hashable, Identifiable {
     var imagesURLS: [URL]
     var bio: String
     var age: Int
+    
+    // Used for card manupulation
+    var x: CGFloat = 0.0
+    var y: CGFloat = 0.0
+    var degree: Double = 0.0
+    
 }
 
 extension Person {
@@ -25,7 +31,7 @@ extension Person {
             URL(string: "https://picsum.photos/400/301")!,
             URL(string: "https://picsum.photos/400/300")!
         ],
-        bio: "Gaming is my life",
+        bio: "Gaming is my life. I love Dogs, biking, swimming and drinving fast cars.",
         age: 21
     )
     
