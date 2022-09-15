@@ -63,6 +63,12 @@ struct MainView: View {
                     Spacer()
                 }
                 .edgesIgnoringSafeArea(.vertical)
+                
+                if appState.showPurchasePopup {
+                    PurchasePopup(isVisible:  $appState.showPurchasePopup)
+                        .animation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.5))
+                        .transition(.offset(y: 800))
+                }
             }
             .modifier(HideNavigationView())
         }
