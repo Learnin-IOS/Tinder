@@ -41,17 +41,42 @@ struct PruchaseOptionsView: View {
             
             Spacer().frame(height: 12)
             
-            Text("$\(String(format: "%.2f", sub.totalCost))/mo")
+            Text("$\(String(format: "%.2f", sub.totalCost))")
                 .font(.system(size: 20, weight: .bold))
             
         }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 18)
         .if(!isSelected) {
             $0.foregroundColor(Color.textPrimary)
         }
-        .if(isSelected) {
+        .if(isSelected && sub.tagLine == .none) {
             $0.overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .stroke(Color.yellow, lineWidth: 1.5)
+            )
+        }
+        .if(isSelected && sub.tagLine != .none) {
+            $0.overlay(
+                ZStack(alignment: .top) {
+                    Rectangle()
+                        .foregroundColor(.yellow)
+                        .frame(height:20)
+                        .cornerRadius(10, corners: [.topLeft, .topRight])
+                        
+                    Text("\(sub.tagLine.rawValue)")
+                        .font(.system(size: 12, weight: .bold))
+                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .padding(.top, 3)
+                        .padding(.horizontal, 6)
+                        .minimumScaleFactor(0.1)
+                    
+                    
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .stroke(Color.yellow, lineWidth: 1.5)
+                    
+                }
             )
         }
     }
@@ -60,9 +85,9 @@ struct PruchaseOptionsView: View {
 struct PruchaseOptionsView_Previews: PreviewProvider {
     static var previews: some View {
         HStack{
-            PruchaseOptionsView(sub: Subscription.example1, isSelected: false)
+            PruchaseOptionsView(sub: Subscription.example1, isSelected: true)
             PruchaseOptionsView(sub: Subscription.example2, isSelected: true)
-            PruchaseOptionsView(sub: Subscription.example3, isSelected: false )
+            PruchaseOptionsView(sub: Subscription.example3, isSelected: true)
         }
     }
 }
