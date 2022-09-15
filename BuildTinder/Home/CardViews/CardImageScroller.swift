@@ -103,7 +103,7 @@ struct CardImageScroller: View {
     
     struct CardImageScroller_Previews: PreviewProvider {
         static var previews: some View {
-            CardImageScroller(person: Person.example, fullScreenMode: .constant(true))
+            CardImageScroller(person: Person.example, fullScreenMode: .constant(false))
         }
     }
 }
