@@ -19,7 +19,7 @@ struct MessageView: View {
                 .padding(10)
                 .foregroundColor(.white)
                 .background(message.fromCurrentUser ? Color.blue : Color.gray)
-                .cornerRadius(10)
+                .cornerRadius(10, corners: [.topRight, .bottomLeft])
             
             if !message.fromCurrentUser {
                 Spacer()
