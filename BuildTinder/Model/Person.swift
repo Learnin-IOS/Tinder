@@ -29,10 +29,10 @@ extension Person {
     static let example = Person(
         name: "Allan",
         imagesURLS: [
-            URL(string: "https://picsum.photos/400/310")!,
+            URL(string: "https://picsum.photos/400/316")!,
             URL(string: "https://picsum.photos/400/302")!,
-            URL(string: "https://picsum.photos/400/301")!,
-            URL(string: "https://picsum.photos/400/300")!
+            URL(string: "https://picsum.photos/400/318")!,
+            URL(string: "https://picsum.photos/400/317")!
         ],
         bio: "Gaming is my life. I love Dogs, biking, swimming and drinving fast cars.",
         age: 21,
@@ -42,7 +42,7 @@ extension Person {
     
     static let example2 = Person(
         name: "Patrick",
-        imagesURLS: [URL(string: "https://picsum.photos/400/304")!],
+        imagesURLS: [URL(string: "https://picsum.photos/400/319")!],
         bio: "I really love cats",
         age: 25,
         distance: 20,
