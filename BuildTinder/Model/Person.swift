@@ -29,7 +29,7 @@ extension Person {
     static let example = Person(
         name: "Allan",
         imagesURLS: [
-            URL(string: "https://picsum.photos/400/303")!,
+            URL(string: "https://picsum.photos/400/310")!,
             URL(string: "https://picsum.photos/400/302")!,
             URL(string: "https://picsum.photos/400/301")!,
             URL(string: "https://picsum.photos/400/300")!
@@ -52,31 +52,57 @@ extension Person {
         Person.example,
         Person.example2,
         Person(name: "Boohle",
-               imagesURLS: [URL(string: "https://picsum.photos/400/302")!],
+               imagesURLS: [
+                URL(string: "https://picsum.photos/400/309")!,
+                URL(string: "https://picsum.photos/400/313")!,
+                URL(string: "https://picsum.photos/400/307")!,
+                URL(string: "https://picsum.photos/400/314")!
+                
+               ],
                bio: "I love hiking",
                age: 28,
                distance: 22,
                bioDescription: "I'm on tinder to make frineds the same way i'm on pornhub to see a plumber repair a sink."),
         Person(name: "Nikita",
-               imagesURLS: [URL(string: "https://picsum.photos/400/303")!],
+               imagesURLS: [
+                URL(string: "https://picsum.photos/400/304")!,
+                URL(string: "https://picsum.photos/400/311")!,
+                URL(string: "https://picsum.photos/400/308")!,
+                URL(string: "https://picsum.photos/400/310")!
+                           ],
                bio: "Music is more than art to me",
                age: 23,
                distance: 18,
                bioDescription: "Honestly, I'm just here looking for fun. Married. Couple of kids, Buut looking for some side action."),
         Person(name: "Samantha",
-               imagesURLS: [URL(string: "https://picsum.photos/400/305")!],
+               imagesURLS: [
+                URL(string: "https://picsum.photos/400/305")!,
+                URL(string: "https://picsum.photos/400/302")!,
+                URL(string: "https://picsum.photos/400/301")!,
+                URL(string: "https://picsum.photos/400/304")!
+               ],
                bio: "I love travelling",
                age: 27,
                distance: 72,
                bioDescription: "Honestly, I'm just here looking for fun. Married. Couple of kids, Buut looking for some side action."),
         Person(name: "Charles",
-               imagesURLS: [URL(string: "https://picsum.photos/400/306")!],
+               imagesURLS: [
+                URL(string: "https://picsum.photos/400/306")!,
+                URL(string: "https://picsum.photos/400/302")!,
+                URL(string: "https://picsum.photos/400/303")!,
+                URL(string: "https://picsum.photos/400/307")!
+               ],
                bio: "i love tring new cuisine",
                age: 19,
                distance: 38,
                bioDescription: "Honestly, I'm just here looking for fun. Married. Couple of kids, Buut looking for some side action."),
         Person(name: "Mia",
-               imagesURLS: [URL(string: "https://picsum.photos/400/307")!],
+               imagesURLS: [
+                URL(string: "https://picsum.photos/400/300")!,
+                URL(string: "https://picsum.photos/400/315")!,
+                URL(string: "https://picsum.photos/400/312")!,
+                URL(string: "https://picsum.photos/400/301")!,
+                           ],
                bio: "I am really boring ",
                age: 30,
                distance: 9,
