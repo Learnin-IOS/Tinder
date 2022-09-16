@@ -13,7 +13,10 @@ struct FullScreenCardView: View {
     
     let screen = UIScreen.main.bounds
     
+    @EnvironmentObject var userMng: UserManager
+    
     @Binding var fullScreenMode: Bool
+    
     var body: some View {
         ZStack (alignment: .bottom ){
             ScrollView(showsIndicators: false){
@@ -42,14 +45,14 @@ struct FullScreenCardView: View {
                         }
                         .padding([.horizontal, .top], 16)
                         
-                        Button(action: {}, label: {
+                        Button(action: { fullScreenMode = false}, label: {
                             Image(systemName: "arrow.down.circle.fill")
                                 .font(.system(size: 42))
                                 .background(Color.white)
                                 .clipShape(Circle())
                         })
                         .padding(.trailing, 15)
-                        .offset(y: -45)
+                        .offset(y: -40)
                     }
                     
                     Spacer().frame(height: 26)
@@ -70,7 +73,7 @@ struct FullScreenCardView: View {
                     Spacer().frame(height: 32)
                     
                     VStack(spacing: 24){
-                        Button(action: {}, label: {
+                        Button(action: { showActionSheet() }, label: {
                             VStack(spacing: 8) {
                                 Text("SHARE \(person.name.uppercased())'S PROFILE")
                                     .font(.system(size: 15, weight:  .medium))
@@ -96,15 +99,18 @@ struct FullScreenCardView: View {
                 Spacer()
                 
                 CircleButtonView(type: .no) {
-                    //
+                    fullScreenMode = false
+                    userMng.swipe( person, .nope)
                 }
                 .frame(height: 50)
                 CircleButtonView(type: .star) {
-                    //
+                    fullScreenMode = false
+                    userMng.superLike(person)
                 }
                 .frame(height: 45)
                 CircleButtonView(type: .heart) {
-                    //
+                    fullScreenMode = false
+                    userMng.swipe(person, .like)
                 }
                 .frame(height: 50)
                 
@@ -123,6 +129,13 @@ struct FullScreenCardView: View {
         .edgesIgnoringSafeArea(.bottom)
         .padding(.top, 40)
         
+    }
+    
+    func showActionSheet (){
+        let items: [Any] = ["What do you think about \(person.name)? \n"]
+        let activity = UIActivityViewController (activityItems: items, applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?
+            .present(activity, animated: true, completion: nil)
     }
 }
 struct FullScreenCardView_Previews: PreviewProvider {
