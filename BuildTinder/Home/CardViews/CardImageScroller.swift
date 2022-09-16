@@ -28,6 +28,10 @@ struct CardImageScroller: View {
         
         imageIndex = min(max(0, newIndex), person.imagesURLS.count - 1)
     }
+    
+    
+    let screenCuttOff = (UIScreen.main.bounds.width / 2) * 0.4
+     
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -40,6 +44,28 @@ struct CardImageScroller: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geo.size.width, height: geo.size.height)
                         .clipped()
+                    
+                    VStack{
+                        
+                        // implementing Like and Nope banner
+                        HStack{
+                            Image("likeButton")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150)
+                                .opacity(Double(person.x / screenCuttOff) - 1)
+                            
+                            Spacer()
+                            
+                            Image("nopeButton")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150)
+                                .opacity(Double(person.x / screenCuttOff * -1 - 1))
+                        }
+                        
+                        Spacer()
+                    }
                     
                     HStack{
                         Rectangle()
