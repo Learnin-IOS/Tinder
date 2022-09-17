@@ -14,15 +14,23 @@ struct CardView: View {
     @Binding var fullScreenMode: Bool
     
     let screenCutoff  = (UIScreen.main.bounds.width / 2) * 0.8
+    
+    @Namespace var imageNameSpace
+    
     var body: some View {
         GeometryReader { geo in
             if fullScreenMode {
-                FullScreenCardView(person: person, fullScreenMode: $fullScreenMode)
+                FullScreenCardView(
+                    person: person,
+                    fullScreenMode: $fullScreenMode,
+                    nameSpace: imageNameSpace)
+                        .animation(.easeOut(duration: 0.2))
             } else {
                 CardImageScroller(person: person, fullScreenMode: $fullScreenMode)
                     .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height)
                     .padding(.leading, 10)
+                    .matchedGeometryEffect(id: "image \(person.id)", in: imageNameSpace)
                     .offset(x: person.x, y: person.y)
                     .rotationEffect(.degrees(person.degree))
                     .gesture(
