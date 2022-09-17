@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct BuildTinderApp: App {
+//    @ObservedObject var userMng
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
