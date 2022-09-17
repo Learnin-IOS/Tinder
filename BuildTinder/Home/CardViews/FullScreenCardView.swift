@@ -17,6 +17,8 @@ struct FullScreenCardView: View {
     
     @Binding var fullScreenMode: Bool
     
+    var nameSpace: Namespace.ID
+    
     var body: some View {
         ZStack (alignment: .bottom ){
             
@@ -29,6 +31,7 @@ struct FullScreenCardView: View {
                         person: person,
                         fullScreenMode: $fullScreenMode )
                     .frame(width: screen.width, height: screen.height * 0.6)
+                    .matchedGeometryEffect(id: "image \(person.id)", in: nameSpace)
                     
                     HStack{
                         VStack(alignment: .leading){
@@ -143,7 +146,11 @@ struct FullScreenCardView: View {
     }
 }
 struct FullScreenCardView_Previews: PreviewProvider {
+    @Namespace static var placeholder
     static var previews: some View {
-        FullScreenCardView(person: Person.example, fullScreenMode: .constant(true))
+        FullScreenCardView(
+            person: Person.example,
+            fullScreenMode: .constant(true),
+            nameSpace: placeholder)
     }
 }
