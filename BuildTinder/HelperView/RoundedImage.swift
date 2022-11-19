@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct RoundedImage: View {
     
     var url: URL?
     var body: some View {
-        KFImage(url)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .clipShape(Circle())
+        AsyncImage(url: url) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Circle())
+            
+        } placeholder: {
+            ProgressView()
+        }
     }
 }
 

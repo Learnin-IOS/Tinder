@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8F0F810C28C7EEF50046FB7D /* PersonSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F810B28C7EEF40046FB7D /* PersonSquare.swift */; };
-		8F347B1C28B6748000C3322E /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F347B1B28B6748000C3322E /* KingfisherSwiftUI */; };
 		8F347B1F28B690B700C3322E /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B1E28B690B700C3322E /* ProfileSwipePromo.swift */; };
 		8F347B2128BCE42C00C3322E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2028BCE42C00C3322E /* Message.swift */; };
 		8F347B2428BCE54000C3322E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F347B2328BCE54000C3322E /* Person.swift */; };
@@ -95,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F347B1C28B6748000C3322E /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +274,6 @@
 			);
 			name = BuildTinder;
 			packageProductDependencies = (
-				8F347B1B28B6748000C3322E /* KingfisherSwiftUI */,
 			);
 			productName = BuildTinder;
 			productReference = 8F3DD87C28AC07D800307239 /* BuildTinder.app */;
@@ -307,7 +304,6 @@
 			);
 			mainGroup = 8F3DD87328AC07D800307239;
 			packageReferences = (
-				8F347B1A28B6748000C3322E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 8F3DD87D28AC07D800307239 /* Products */;
 			projectDirPath = "";
@@ -569,25 +565,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8F347B1A28B6748000C3322E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = exactVersion;
-				version = 5.15.7;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8F347B1B28B6748000C3322E /* KingfisherSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8F347B1A28B6748000C3322E /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F3DD87428AC07D800307239 /* Project object */;
 }
