@@ -16,13 +16,15 @@ struct CardStack: View {
     var screen = UIScreen.main.bounds
     
     var body: some View {
-
-        ZStack {
-            ForEach(people) { person in
-                CardView(person: person, fullScreenMode: $fullScreenMode)
+        GeometryReader { geo in
+            ZStack {
+                ForEach(people) { person in
+                    CardView(person: person, fullScreenMode: $fullScreenMode)
+                }
             }
+            // Height to 100% of the screen
+            .frame(width: screen.width, height: fullScreenMode ? screen.height : geo.size.height * 1.0)
         }
-        .frame(width: screen.width, height: fullScreenMode ? screen.height : 550)
     }
 }
 
