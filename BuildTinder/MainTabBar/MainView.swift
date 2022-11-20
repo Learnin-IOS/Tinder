@@ -11,29 +11,31 @@ struct MainView: View {
     @EnvironmentObject var appState: AppStateManager
     var body: some View {
         NavigationView {
-            // Bottom tab view 
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "flame.fill")
-                    }
-                MatchesView()
-                    .tabItem {
-                        Image(systemName: "star.fill")
-                    }
-                MessageListView()
-                    .tabItem {
-                        Image(systemName: "message.fill")
-                    }
-                ProfileView()
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                    }
-            }
-            if appState.showPurchasePopup {
-                PurchasePopup(isVisible:  $appState.showPurchasePopup)
-                    .animation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.5))
-                    .transition(.offset(y: 800))
+            // Bottom tab view
+            ZStack {
+                TabView {
+                    HomeView()
+                        .tabItem {
+                            Image(systemName: "flame.fill")
+                        }
+                    MatchesView()
+                        .tabItem {
+                            Image(systemName: "star.fill")
+                        }
+                    MessageListView()
+                        .tabItem {
+                            Image(systemName: "message.fill")
+                        }
+                    ProfileView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                        }
+                }
+                if appState.showPurchasePopup {
+                    PurchasePopup(isVisible:  $appState.showPurchasePopup)
+                        .animation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.5))
+                        .transition(.offset(y: 800))
+                }
             }
         }
     }
