@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct PersonSquare: View {
     var person: Person
@@ -15,10 +14,15 @@ struct PersonSquare: View {
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .bottomLeading) {
-                KFImage(person.imagesURLS.first)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: geo.size.width, height: geo.size.height)
+                AsyncImage(url: person.imagesURLS.first) { personImage in
+                    personImage
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                    
+                } placeholder: {
+                    ProgressView()
+                }
                     .if(blur) {
                         $0.blur(radius: 25)
                     }

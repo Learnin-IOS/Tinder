@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
-
 
 struct CardImageScroller: View {
     
@@ -36,14 +34,17 @@ struct CardImageScroller: View {
         GeometryReader { geo in
             ZStack {
                 ZStack{
-                    KFImage(person.imagesURLS[imageIndex])
-                        .placeholder {
-                            Color.white
-                        }
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: geo.size.width, height: geo.size.height)
-                        .clipped()
+                    // fetch images from person imagesURL
+                    AsyncImage(url: person.imagesURLS[imageIndex]) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .clipped()
+                        
+                    }  placeholder: {
+                        ProgressView()
+                    }
                     
                     VStack{
                         

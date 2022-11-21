@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct MessageRowView: View {
     var preview: MessagePreview
