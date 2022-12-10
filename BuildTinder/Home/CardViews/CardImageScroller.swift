@@ -119,6 +119,8 @@ struct CardImageScroller: View {
                             })
                         }
                         .padding(16)
+                        // space for horizontal Tab
+                        .padding(.bottom, 85)
                     }
                 }
                 .foregroundColor(Color.white)
