@@ -20,7 +20,7 @@ struct HomeView: View {
                     .frame(height: geo.size.height * 1.15)
             }
             CircleHorizontalTab
-                .offset(y: -2)
+                .offset(y: -6.5)
         }
     }
 }
